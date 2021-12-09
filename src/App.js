@@ -1,39 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
-import axios from 'axios';
-import React, {useEffect} from 'react';
-import { render } from '@testing-library/react';
-
-/*const fetchUser = () => {
-  axios.get("http://localhost:8080/user/all")
-}*/
+//import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import PersonList from './Component/UserComponent.js';
 
 function App() {
-useEffect(()=>{
-  getData();
-})
-  function getData () {
-
-    fetch('http://localhost:3000/php/test.php')
-      .then((response) => response.json())
-      .then((response) => {
-          /*this.setState({
-            forumdata: response,
-          })*/
-          console.log(response)
-           })
-      .catch((error) => {
-          console.error(error);
-      })
-
-  }
-  
-    return(
-      <div>hjälp</div>
-    );
-      
-}
-  
-
+  return (
+    <div className="App">
+      <PersonList/>
+    </div>
+  )
+};
 
 export default App;
